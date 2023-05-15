@@ -1,0 +1,122 @@
+//Ejemplo de Nesting y Mixin y Extend
+@mixin justify($justify) {
+    display: flex;
+    justify-content: $justify;
+    }
+
+.general {
+    padding-bottom: 20px;
+    .heading {
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        margin: 20px auto;
+        h1{
+            font-size: 50px;
+            color:#000;
+            margin-bottom: 25px;
+            position: relative;
+            padding: 10px;
+            &::after{
+                content:"";
+                position: absolute;
+                width: 100%;
+                height: 4px;
+                display: block;
+                margin: 0 auto;
+                background-color: rgb(84, 175, 175);
+            }
+        }
+        p {
+            font-size: 18px;
+            color: #515050;
+            margin-bottom: 35px;
+            text-align: justify;
+        }
+    }
+    .container{
+        width: 90%;
+        margin: 10px auto;
+        padding: 10px 20px;
+        .about {
+            //Ejemplo de Mixin
+            @include justify(center);
+            align-items: center;
+            flex-wrap: wrap;
+            .about-image {
+                flex: 1;
+                margin-right: 40px;
+                overflow: hidden;
+                img {
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    transition: 0.5s ease;
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+            .about-content {
+                flex:1;
+                text-align: center;
+                h2 {
+                    font-family: 'Varta', sans-serif;
+                    font-size: 2rem;
+                    margin-bottom: 5px;
+                    color: rgb(22, 158, 135);
+                    padding: 10px;
+                }
+                p {
+                    font-size: 18px;
+                    line-height: 1.4;
+                    color: #786b6b;
+                    text-align: justify;
+                }
+                .read-more {
+                    display: inline-block;
+                    padding: 10px 20px;
+                    background-color:  rgb(28, 133, 133);
+                    color: #fff;
+                    font-size: 19px;
+                    text-decoration: none;
+                    border-radius: 25px;
+                    margin-top: 15px;
+                    transition: 0.3s ease;
+                    &:hover{
+                        background-color: rgb(11, 83, 83);
+                    }
+                }
+
+                }
+            }
+        }
+    }
+    
+    .section-clients {
+        h2 {
+            font-family: 'Varta', sans-serif;
+            font-size: 2rem;
+            margin: 10px;
+            text-align: center;
+            color: #333;
+            padding-top: 30px;
+        }
+        .clientes{
+            padding: 50px 50px;
+            display: flex;
+            justify-content: center;
+            background-image: linear-gradient(to bottom, #67999e, #7cadae, #93c2bd, #aad7ce, #c3ecde);
+            div {
+                padding: 20px 20px;
+                .client1 {
+                    width: 250px;
+                    height: 150px;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }

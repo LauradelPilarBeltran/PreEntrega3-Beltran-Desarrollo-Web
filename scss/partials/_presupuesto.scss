@@ -1,0 +1,36 @@
+// PRESUPUESTO MAIN
+
+.contenedor-presupuesto img{
+    display: block;
+    width: 100%;
+}
+
+.titulo-presupuesto {
+    font-size: 50px;
+    color:$color-principal;
+    text-align: center;
+    padding: 20px;
+}
+
+.titulo-presupuesto::after {
+     content:"";
+     position: center;
+     width: 50%;
+     height: 4px;
+     display: block;
+     margin: 0 auto;
+     background-color: rgb(84, 175, 175);
+ }
+
+.title-presupuesto {
+    font-family: 'Varta', sans-serif;
+    font-size: 2rem;
+    margin: 10px;
+    text-align: center;
+    color: $color-secundario;
+    padding: 20px;
+}
+
+.presupuesto-tabla{
+    padding: 50px;
+}

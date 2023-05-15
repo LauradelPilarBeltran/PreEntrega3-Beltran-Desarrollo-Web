@@ -1,0 +1,51 @@
+//SERVICIOS MAIN
+
+.imagen-servicios img{
+    display: block;
+    width: 100%;
+}
+
+.container div {
+    margin-right: 0;
+    margin-left:0;
+}
+
+.container h1 {
+    font-size: 35px;
+    color: $color-principal;    
+}
+
+.container h1::after {
+    content:"";
+    position: center;
+    width: 50%;
+    height: 4px;
+    display: block;
+    margin: 0 auto;
+    background-color: rgb(84, 175, 175);
+}
+
+.parrafo-servicios {
+    font-size: 15px;
+    color: $color-parrafo;
+    text-align: justify;
+}
+
+.card-personalizada img {
+    width: 200px;
+    padding: 10px;
+    margin-left: 35px;
+}
+
+.card-text {
+    text-align: justify;
+}
+
+.boton-card {
+        background-color: rgb(11, 102, 102);
+        border: 1px solid rgb(11, 121, 121);
+        outline: none;
+        padding: 10px 18px;
+        border-radius: 20px;
+        color: #fff
+}
